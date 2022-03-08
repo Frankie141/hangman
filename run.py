@@ -14,5 +14,13 @@ print("""
 def get_random_word(words):
     #Chooses random word from the list
     word = random_word.choice(words)
-    
+
     return word.upper()
+
+
+def game_play(word):
+    word_execution = "_" * len(word)
+    guessed = False
+    letters_guessed = []
+    words_guessed = []
+    attempts = 10
