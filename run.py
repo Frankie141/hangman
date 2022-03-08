@@ -2,9 +2,6 @@
 import random
 from words import words
 
-words = ['Python', 'JavaScript', 'Computer', 'player',
-         'library', 'Peacock', 'Rainbow', 'Rock', 'Paper']
-
 # Welcome message and name input
 name = input("Please enter your name: ")
 print(""" 
@@ -15,8 +12,7 @@ print("""
     """)
 
 def get_random_word(words):
-    word = random_word.choice(words) # Chooses random word from the list
-    while '-' in word or ' ' word: 
+    #Chooses random word from the list
     word = random_word.choice(words)
-
-    return word    
+    
+    return word.upper()
