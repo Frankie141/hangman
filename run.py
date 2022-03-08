@@ -35,3 +35,18 @@ def play_game(word):
     while guessed == False and attempts > 0:
         print('You have ' + str(attempts) + ' attempts')
         guess = input('Take a guess for the missing letter or word.').lower()
+        # User inputs a letter
+        if len(guess) == 1:
+            if guess not in alphabet: 
+                print('Please check your entry, you can only enter a letter.')
+            elif guess in letters_guessed: 
+                print('You have already chosen this letter, please try again.')
+            elif guess not in word: 
+                print('This letter is not in the word. Please try again.')    
+                letters_guessed.append(guess)
+                attempts -= 1
+            elif guess in word: 
+                print('Great work, you guessed the correct letter.') 
+                letters_guessed.appen(guess)
+            else: 
+                print('Please may have an incorrect entry, please try again.') 
