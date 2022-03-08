@@ -1,5 +1,5 @@
-# easy random work generator
 import random
+import string
 from words import words
 
 # Welcome message and name input
@@ -11,6 +11,7 @@ print("""
         letters. Good luck name\n
     """)
 
+
 def get_random_word(words):
     #Chooses random word from the list
     word = random_word.choice(words)
@@ -18,9 +19,19 @@ def get_random_word(words):
     return word.upper()
 
 
-def game_play(word):
+def play_game(word):
     word_execution = "_" * len(word)
     guessed = False
     letters_guessed = []
     words_guessed = []
-    attempts = 10
+    attempts = 7
+
+    get_random_word(words)
+
+    print()
+    print('The word contains', len(word), 'letters.')
+    print(len(word) * '_')
+
+    while guessed == False and attempts > 0:
+        print('You have ' + str(attempts) + ' attempts')
+        guess = input('Take a guess for the missing letter or word.').lower()
