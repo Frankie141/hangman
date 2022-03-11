@@ -3,7 +3,7 @@ import string
 from words import words
 
 # Welcome message and name input
-name = input("Please enter your name: ")
+name = input("Please enter your name: \n")
 print(""" 
         Welcome name to Hangman. You will be playing against the computer.
         The computer will randomly choose a word and you will need to choose 
